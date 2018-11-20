@@ -1,0 +1,44 @@
+Important notes
+---------------
+
+The image is based on Ubuntu 16.04 / ROS Kinetic. The image will be upgraded to
+Ubuntu 18.04 / ROS Melodic in the near future.
+
+To upgrade the image to Ubuntu 18.04 / ROS Melodic, simply replace the two 
+(uncommented) instances of the words "kinetic" in the Dockerfile with "melodic".
+
+
+
+Getting started
+---------------
+
+Build your image:
+$ ./build.sh
+
+After building the image, create a container from your image (Use "docker images" to 
+identify your image_id):
+$ ./create_container.sh <name> <image_id>
+
+
+
+Using the scripts
+-----------------
+
+Start your container:
+$ ./start.sh <name>
+
+Open a shell into your container:
+$ ./connect.sh <name>
+
+Stop the container:
+$ ./stop.sh <name>
+
+
+
+Special features
+----------------
+
+To run tmkit tests inside the container:
+$ cd /code/default
+$ ./tmkit_verify.sh <option>      # note: the "sussman_run" option will try the whole shebang
+

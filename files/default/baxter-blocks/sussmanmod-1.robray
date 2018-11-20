@@ -1,0 +1,34 @@
+
+include "class.robray"
+include "table.robray"
+
+
+/**********/
+/* Blocks */
+/**********/
+frame block_a {
+    parent block_b;
+    translation [0, 0, block_stack];
+    geometry {
+        isa block;
+        isa red;
+    }
+}
+
+frame block_b {
+    parent block_c;
+    translation [0, -.25, block_stack];
+    geometry {
+        isa block;
+        isa blue;
+    }
+}
+
+frame block_c {
+    parent block_d;
+    translation [0, -.5, block_stack];
+    geometry {
+        isa block;
+        isa green;
+    }
+}
