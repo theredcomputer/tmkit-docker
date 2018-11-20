@@ -12,10 +12,13 @@ To upgrade the image to Ubuntu 18.04 / ROS Melodic, simply replace the two
 Getting started
 ---------------
 
-Build your image:
+First, you'll need an image. You may build it by running:
 $ ./build.sh
 
-After building the image, create a container from your image (Use "docker images" to 
+Alternatively, you can acquire a prebuilt image by running:
+$ docker pull theredcomputer/tmkit_docker
+
+After building/acquiring the image, create a container from your image (Use "docker images" to 
 identify your image_id):
 $ ./create_container.sh <name> <image_id>
 
