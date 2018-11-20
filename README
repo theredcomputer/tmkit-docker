@@ -45,3 +45,10 @@ To run tmkit tests inside the container:
 $ cd /code/default
 $ ./tmkit_verify.sh <option>      # note: the "sussman_run" option will try the whole shebang
 
+
+
+Specifics
+---------
+
+Any files placed in the repository's "files" folder will be available inside 
+the image at file path "/code".
